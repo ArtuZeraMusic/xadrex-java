@@ -50,7 +50,7 @@ public class ChessMatch {
 	
 	private void validateSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
-			throw new ChessException("Não existe peca na posicao de origem");
+			throw new ChessException("Nao existe peca na posicao de origem");
 		}
 		if(!board.piece(position).isThereAnyPossbleMove()) {
 			throw new ChessException("Peca sem movimentos possiveis");
@@ -59,7 +59,7 @@ public class ChessMatch {
 	
 	private void validateTargetPosition(Position source, Position target) {
 		if (!board.piece(source).possibleMove(target)) {
-			throw new ChessException("A peça escolhida não pode se mover para este destino");
+			throw new ChessException("A peca escolhida nao pode se mover para este destino");
 		}
 	}
 	
