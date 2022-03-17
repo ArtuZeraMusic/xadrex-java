@@ -44,7 +44,7 @@ public class Board {
 
 	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPiece(position)) {
-			throw new BoardException("Já existe uma peça na posição " + position);
+			throw new BoardException("Ja existe uma peca na posicao " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
@@ -52,7 +52,7 @@ public class Board {
 
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Posição fora do Tabuleiro");
+			throw new BoardException("Posicao fora do Tabuleiro");
 		}
 		if(piece(position) == null) {
 			return null;
